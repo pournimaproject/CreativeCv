@@ -5,10 +5,12 @@ import ArticlesSection from '@/components/ArticlesSection';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import EasterEgg from '@/components/EasterEgg';
+import ThemeToggle from '@/components/ThemeToggle';
 
 function App() {
   return (
     <div className="custom-cursor">
+      <ThemeToggle />
       <Header />
       
       <main>
