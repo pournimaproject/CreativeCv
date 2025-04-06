@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,12 +15,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 py-4 md:py-5 transition-all duration-300 ${
+    <header className={`fixed top-0 w-full z-40 py-4 md:py-5 transition-all duration-300 ${
       isScrolled ? 'bg-card/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-2xl font-poppins font-bold relative group">
+        <a href="#" className="text-2xl font-poppins font-bold relative group ml-12 sm:ml-0">
           <span className="text-primary">{'{'}</span>
           <span>Pournima</span>
           <span className="text-primary">{'}'}</span>
@@ -52,9 +51,6 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-
-          {/* Theme Toggle */}
-          <ThemeToggle />
           
           {/* Mobile Menu Button */}
           <button 
