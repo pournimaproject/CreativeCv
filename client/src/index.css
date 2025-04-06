@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 40% 2%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 2%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 2%;
+    
+    --primary: 354 100% 71%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 174 71% 59%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 20% 92%;
+    --muted-foreground: 210 20% 40%;
+    
+    --accent: 174 71% 59%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 354 100% 71%;
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 231 15% 18%;
+    --foreground: 60 10% 96%;
+    
+    --card: 232 15% 27%;
+    --card-foreground: 60 10% 96%;
+    
+    --popover: 232 15% 27%;
+    --popover-foreground: 60 10% 96%;
+    
+    --primary: 162 100% 71%;
+    --primary-foreground: 231 15% 18%;
+    
+    --secondary: 265 89% 78%;
+    --secondary-foreground: 231 15% 18%;
+    
+    --muted: 232 15% 27%;
+    --muted-foreground: 60 10% 66%;
+    
+    --accent: 265 89% 78%;
+    --accent-foreground: 231 15% 18%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 60 10% 96%;
+    
+    --border: 232 15% 35%;
+    --input: 232 15% 35%;
+    --ring: 162 100% 71%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom cursor */
+  .custom-cursor {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23FF6B6B' stroke-width='2'><circle cx='12' cy='12' r='10'/></svg>") 16 16, auto;
+  }
+  
+  .dark .custom-cursor {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%2364FFDA' stroke-width='2'><circle cx='12' cy='12' r='10'/></svg>") 16 16, auto;
+  }
+  
+  /* Hide scrollbar but allow scrolling */
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  /* Lamp glow effect */
+  .lamp-glow {
+    filter: drop-shadow(0 0 8px rgba(255, 107, 107, 0.8));
+    transition: filter 0.3s ease;
+  }
+
+  .dark .lamp-glow {
+    filter: drop-shadow(0 0 12px rgba(100, 255, 218, 0.8));
+  }
+
+  /* Wave divider */
+  .wave-divider {
+    display: block;
+    position: relative;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' class='fill-secondary'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' class='fill-secondary'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' class='fill-secondary'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* Project card hover effect */
+  .project-card {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    @apply shadow-xl;
+  }
+
+  /* Social icons hover effect */
+  .social-icon {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .social-icon:hover {
+    transform: translateY(-5px) rotate(8deg);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-bounce-slight {
+    animation: bounce-slight 2s ease-in-out infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes bounce-slight {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+  
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
