@@ -1,0 +1,40 @@
+**Prompt for Creating a Portfolio Website on Replit (Inspired by Cassie Codes)**  
+
+**Objective:**  
+Create a playful, interactive portfolio website for **Pournima Pote** using **HTML, CSS, and JavaScript** on Replit. The design should mirror the fun, engaging UX of *Cassie Codes*, with a focus on:  
+- A **light/dark mode toggle** (e.g., clickable lamp or similar interactive element).  
+- Whimsical, code-driven animations or micro-interactions (e.g., hover effects, click reactions).  
+- Clean, scrollable layout with sections for projects, articles, and an "About Me".  
+
+**Requirements:**  
+1. **Theme**: Playful yet professional, with a color scheme that adapts to light/dark mode.  
+2. **Interactive Elements**:  
+   - **Toggle**: A clickable object (like Cassie’s lamp) to switch themes. *Bonus*: Add sound effects or visual feedback (e.g., lamp "glows" in dark mode).  
+   - **Hover Animations**: Buttons/links that react playfully (e.g., bounce, color shift).  
+3. **Sections**:  
+   - **Hero Section**: Tagline: *"I like making funny interactive things with code. I also write & talk about them."*  
+   - **Projects**: Grid/cards with GIFs/demos. Add a "Click me!" prompt for surprises.  
+   - **Articles/Posts**: Preview snippets with quirky icons.  
+   - **Footer**: Social links with custom SVG icons.  
+4. **Tech**: Pure **HTML/CSS/JS** (no frameworks). Use `localStorage` to save theme preference.  
+
+**Example Code Snippets to Include:**  
+- **HTML**: Lamp toggle div with `onclick="toggleTheme()"`.  
+- **CSS**: Variables for light/dark colors (e.g., `--bg-light`, `--text-dark`).  
+- **JS**: Theme-switching logic with class toggles and `document.documentElement.setAttribute('data-theme', 'dark')`.  
+
+**Inspiration Quote**:  
+*"Make it a joy to scroll through, click around, and read."*  
+
+**Replit Setup**:  
+- Name the project **"Pournima-Pote-Portfolio"**.  
+- Use Replit’s built-in browser preview for testing.  
+
+**Deliverables**:  
+- A live Replit link.  
+- Readme with instructions to toggle interactions.  
+
+**Bonus**: Add a hidden Easter egg (e.g., Konami code triggers a fun animation).  
+
+---  
+**Note**: Focus on small, delightful details (like Cassie’s lamp) to stand out! Would you like a starter template or JS logic for the theme toggle?
