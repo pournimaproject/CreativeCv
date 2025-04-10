@@ -284,8 +284,31 @@ nav {
   height: 100vh;
   display: flex;
   align-items: center;
-  text-align: center;
   padding-top: var(--header-height);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .hero-section h1 {
@@ -300,16 +323,38 @@ nav {
 
 .tagline {
   font-size: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+  max-width: 500px;
+  margin-bottom: 2rem;
   opacity: 0.9;
 }
 
 .hero-buttons {
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+
+.floating-image {
+  max-width: 80%;
+  z-index: 2;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.circle-bg {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 .btn {
@@ -556,16 +601,36 @@ section {
   justify-content: center;
 }
 
-.image-placeholder {
+.profile-image {
+  position: relative;
   width: 280px;
   height: 280px;
-  background-color: var(--secondary-color);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
-  color: white;
+}
+
+.profile-image .circle-bg {
+  width: 280px;
+  height: 280px;
+  background-color: var(--primary-color);
+  opacity: 0.2;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.profile-image img.hover-effect {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover img.hover-effect {
+  transform: scale(1.05) rotate(2deg);
 }
 
 /* Footer */
