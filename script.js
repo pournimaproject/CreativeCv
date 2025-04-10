@@ -117,6 +117,7 @@ function setupScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-fade-in');
+                entry.target.style.opacity = '1';
                 observer.unobserve(entry.target);
             }
         });
@@ -124,11 +125,12 @@ function setupScrollAnimations() {
     
     // Create the intersection observer
     const observer = new IntersectionObserver(animateOnScroll, {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
     
     // Target all section titles, cards, and other elements to animate
-    const elementsToAnimate = document.querySelectorAll('.section-title, .project-card, .article-card, .about-content > div');
+    const elementsToAnimate = document.querySelectorAll('.section-title, .projects-grid .project-card, .articles-grid .article-card, .about-content > div, .profile-image, .hero-image');
     
     // Observe each element
     elementsToAnimate.forEach(element => {
