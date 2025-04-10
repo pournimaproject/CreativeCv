@@ -112,32 +112,45 @@ function setupSmoothScrolling() {
 
 // Scroll Animations
 function setupScrollAnimations() {
-    // Detect when elements come into view and add animation classes
-    const animateOnScroll = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
-                entry.target.style.opacity = '1';
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-    
-    // Create the intersection observer
-    const observer = new IntersectionObserver(animateOnScroll, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    // Target all section titles, cards, and other elements to animate
+    // We'll set a flag to prevent animation issues
+    let hasAnimated = false;
+
+    // First, make sure all elements are visible initially
     const elementsToAnimate = document.querySelectorAll('.section-title, .projects-grid .project-card, .articles-grid .article-card, .about-content > div, .profile-image, .hero-image');
     
-    // Observe each element
+    // Make all elements visible by default
     elementsToAnimate.forEach(element => {
-        // Add a base invisible class first
-        element.style.opacity = '0';
-        observer.observe(element);
+        element.style.opacity = '1';
     });
+    
+    // Then set up smoother animations for scroll effects
+    window.addEventListener('scroll', function() {
+        // Only run once to prevent layout thrashing
+        if (!hasAnimated) {
+            hasAnimated = true;
+            
+            // Add a nice fade-in class to elements as they scroll into view
+            elementsToAnimate.forEach(element => {
+                if (isElementInViewport(element)) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+            
+            // Reset the flag after a short delay so animations can happen again on further scrolling
+            setTimeout(() => {
+                hasAnimated = false;
+            }, 150);
+        }
+    });
+}
+
+// Helper function to check if an element is in the viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
 }
 
 // Project Card Animations
