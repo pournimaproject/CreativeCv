@@ -4,7 +4,7 @@ A playful and interactive portfolio website with advanced CSS animations and the
 
 ## Features
 
-- Interactive lamp for theme toggle (dark/light mode)
+- Interactive lamp for theme toggle (light/dark mode)
 - Advanced CSS animations and effects
 - Responsive design for all devices
 - Project showcase section
@@ -12,34 +12,43 @@ A playful and interactive portfolio website with advanced CSS animations and the
 - About section
 - Easter egg feature (Konami code: ↑↑↓↓←→←→BA)
 
-## Tech Stack
+## Technology Stack
 
-- React
-- TypeScript
-- Tailwind CSS
-- Express.js
-- Shadcn UI Components
+- HTML
+- CSS
+- JavaScript (Vanilla)
 
 ## Local Development
 
-```bash
-# Install dependencies
-npm install
+Simply open the `index.html` file in your browser!
 
-# Start the development server
-npm run dev
-```
+## Deployment on Render.com (Static Site)
 
-## Production Build
+1. Log in to your Render.com account (or create one if you don't have it yet)
+2. Click on "New +" and select "Static Site"
+3. Connect your GitHub repository
+4. Set the following configuration:
+   - **Name**: your preferred site name
+   - **Build Command**: (Leave empty - not needed for static site)
+   - **Publish Directory**: `.` (dot, meaning the root directory)
+5. Click "Create Static Site"
 
-```bash
-# Create a production build
-npm run build
+That's it! Your portfolio website will be deployed and accessible at the provided Render URL.
 
-# Start the production server
-npm start
-```
+## Customization
 
-## Deployment Instructions
+- Edit the content in `index.html` to personalize your portfolio
+- Modify colors and styles in `styles.css`
+- Add custom functions or animations in `script.js`
 
-This project is configured for deployment on Render.com.
+## Features
+
+### Theme Toggle
+Click the lamp in the top left corner to toggle between light and dark mode.
+
+### Easter Egg
+Enter the Konami code (↑↑↓↓←→←→BA) anywhere on the site to trigger a surprise!
+
+## License
+
+MIT
