@@ -447,6 +447,8 @@ section {
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: all var(--transition-speed) ease;
+  opacity: 1 !important; /* Ensure consistent visibility */
+  transform: none; /* Reset any transform that might affect visibility */
 }
 
 .project-card:hover {
@@ -517,6 +519,8 @@ section {
   box-shadow: var(--card-shadow);
   transition: all var(--transition-speed) ease;
   padding: 1.5rem;
+  opacity: 1 !important; /* Ensure consistent visibility */
+  transform: none; /* Reset any transform that might affect visibility */
 }
 
 .article-card:hover {
@@ -779,11 +783,13 @@ footer {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.5s ease-in-out;
+  animation: fade-in 0.8s ease-in-out forwards;
+  opacity: 1 !important; /* Ensure elements stay visible */
 }
 
 .animate-slide-up {
-  animation: slide-up 0.5s ease-out;
+  animation: slide-up 0.7s ease-out;
+  opacity: 1 !important; /* Ensure elements stay visible */
 }
 
 /* Responsive Styles */
