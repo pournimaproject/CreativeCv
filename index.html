@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pournima Pote - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle Lamp -->
+    <div class="lamp-container" id="themeToggle">
+        <div class="lamp-ceiling"></div>
+        <div class="lamp-rope"></div>
+        <div class="lamp-knob"></div>
+        <div class="lamp-rope-bottom"></div>
+        <div class="lamp">
+            <svg class="lamp-glow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="lamp-base"></path>
+                <path d="M12 17V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="lamp-base"></path>
+                <path d="M7 14C7 14 8.5 17 12 17C15.5 17 17 14 17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="lamp-base"></path>
+                <path d="M17 10C17 6.13401 14.866 3 12 3C9.13401 3 7 6.13401 7 10C7 11.933 7 14 7 14H17C17 14 17 11.933 17 10Z" stroke="currentColor" stroke-width="2" class="lamp-base"></path>
+                <path d="M17 10C17 6.13401 14.866 3 12 3C9.13401 3 7 6.13401 7 10C7 11.933 7 14 7 14H17C17 14 17 11.933 17 10Z" fill="currentColor" class="lamp-shade"></path>
+                
+                <!-- Light Ray - Visible only in light mode -->
+                <g class="light-rays">
+                    <path d="M12 1V2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="ray ray-1"></path>
+                    <path d="M18.364 4.22183L17.3033 5.28255" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="ray ray-2"></path>
+                    <path d="M21 10.9999H19.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="ray ray-3"></path>
+                    <path d="M5.63599 4.22183L6.69672 5.28255" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="ray ray-4"></path>
+                    <path d="M3 10.9999H4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="ray ray-5"></path>
+                </g>
+                
+                <!-- Light Bulb - Visible only in dark mode -->
+                <path d="M12 10.5C12.8284 10.5 13.5 9.82843 13.5 9C13.5 8.17157 12.8284 7.5 12 7.5C11.1716 7.5 10.5 8.17157 10.5 9C10.5 9.82843 11.1716 10.5 12 10.5Z" fill="currentColor" class="light-bulb"></path>
+            </svg>
+            <div class="tooltip">Pull to toggle theme</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">PP</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1 class="animate-slide-up">Hello, I'm <span class="highlight">Pournima Pote</span></h1>
+                <p class="tagline animate-slide-up">I like making funny interactive things with code. I also write & talk about them.</p>
+                <div class="hero-buttons animate-slide-up">
+                    <a href="#projects" class="btn btn-primary">See My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="scroll-indicator animate-bounce-slight">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <div class="wave-divider"></div>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Here are some of my recent works</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #6C63FF;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Interactive Dashboard</h3>
+                            <p>A responsive dashboard with real-time data visualization and user analytics.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #FF6584;">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Animation Library</h3>
+                            <p>A collection of reusable CSS animations and transitions for modern web applications.</p>
+                            <div class="project-tags">
+                                <span>CSS</span>
+                                <span>SCSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #43CBFF;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Mobile App Interface</h3>
+                            <p>A sleek, intuitive mobile app interface with gesture-based interactions.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #F9A826;">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Browser Game</h3>
+                            <p>A fun, addictive browser-based game with leaderboards and achievements.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>Canvas</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wave-divider"></div>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles-section">
+            <div class="container">
+                <h2 class="section-title">My Articles</h2>
+                <p class="section-subtitle">Thoughts, tutorials and insights</p>
+                
+                <div class="articles-grid">
+                    <!-- Article 1 -->
+                    <div class="article-card">
+                        <div class="article-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="article-content">
+                            <h3>The Art of CSS Animations</h3>
+                            <p class="article-date">April 5, 2025</p>
+                            <p class="article-excerpt">Exploring the creative possibilities of CSS animations and how they can enhance user experience.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="article-card">
+                        <div class="article-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="article-content">
+                            <h3>JavaScript: The Good Parts</h3>
+                            <p class="article-date">March 15, 2025</p>
+                            <p class="article-excerpt">A deep dive into JavaScript best practices and patterns for clean, maintainable code.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article-card">
+                        <div class="article-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="article-content">
+                            <h3>The Magic of Micro-Interactions</h3>
+                            <p class="article-date">February 28, 2025</p>
+                            <p class="article-excerpt">How small, thoughtful interactions can create memorable user experiences.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wave-divider"></div>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <p>Hi there! I'm Pournima, a creative developer passionate about building beautiful, interactive web experiences. With a background in both design and development, I strive to create digital products that are both visually appealing and functionally robust.</p>
+                        <p>When I'm not coding, you can find me exploring new technologies, writing about my discoveries, or speaking at tech events. I believe in continuous learning and sharing knowledge with the community.</p>
+                        
+                        <div class="skills">
+                            <h3>My Skills</h3>
+                            <div class="skill-tags">
+                                <span>HTML5</span>
+                                <span>CSS3/SCSS</span>
+                                <span>JavaScript</span>
+                                <span>UX/UI Design</span>
+                                <span>Responsive Design</span>
+                                <span>Animation</span>
+                                <span>Web Accessibility</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h2>Get In Touch</h2>
+                    <p>Feel free to reach out for collaborations, opportunities, or just a friendly chat!</p>
+                    <a href="mailto:pournima@example.com" class="email-link">pournima@example.com</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="CodePen">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pournima Pote. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Element (Hidden by default) -->
+    <div id="easterEgg" class="easter-egg">
+        <div class="easter-egg-content">
+            <h3>You found the secret! 🎉</h3>
+            <p>Thanks for checking out my Konami code easter egg.</p>
+            <button id="closeEasterEgg" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
